@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Abhaya Libre', serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* -----------front page -------------- */
+#log-in-page {
+    height: 100vh;
+}
+.front-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-page-title {
+    margin-bottom: 70px;
+}
+.front-page-title h1{
+    font-weight: 700;
+}
+.sign-in-form {
+    padding: 50px 30px !important;
+}
+.form-group {
+    margin-bottom: 15px;
+}
