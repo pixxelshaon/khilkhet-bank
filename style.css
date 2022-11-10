@@ -11,26 +11,38 @@ li {
     list-style: none;
 }
 /* -----------front page -------------- */
-#log-in-page {
+#login-page {
     height: 100vh;
+display:flex;
+justify-content: center;
+align-items: center;
 }
-.front-page {
+.login-area {
+    margin-top: 80px;
+}
+/* -----------transaction area------------ */
+#transaction-area {
     height: 100vh;
+    opacity: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.front-page-title {
-    margin-bottom: 70px;
+.deposit-section {
+    background-color: #008080;
 }
-.front-page-title h1{
-    font-weight: 700;
+.deposit-section h4,h1 {
+    font-weight: 800;
 }
-.sign-in-form {
-    padding: 50px 30px !important;
+.withdraw-section {
+    background-color: #800080;
 }
-.form-group {
-    margin-bottom: 15px;
+.withdraw-section h4,h1 {
+    font-weight: 800;
+}
+.balance-section {
+background-color: #800000;
+}
+.balance-section h4,h1 {
+    font-weight: 800;
 }
