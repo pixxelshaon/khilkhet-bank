@@ -16,40 +16,40 @@
 <body>
 
     <!-- -------------login page------------- -->
-   <section id="login-page" >
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center mx-auto">
-                <h1>Welcome To Khilkhet Bank</h1>
-                <h4>Khilkhet Bazar, Khilkhet, Dhaka-1229</h4>
+    <section id="login-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center mx-auto">
+                    <h1>Welcome To Khilkhet Bank</h1>
+                    <h4>Khilkhet Bazar, Khilkhet, Dhaka-1229</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="row login-area">
-            <div class="col-md-6 mx-auto shadow p-3 mb-5 bg-white rounded p-5">
-                <h4>LOG IN</h4>
-                <input type="text" class="form-control" placeholder="Enter your email">
-                <input type="password" name="" id="" class="form-control mt-3" placeholder="Enter your password">
-                <button class="btn btn-success form-control mt-3" id="login-btn">LOG IN</button>
+            <div class="row login-area">
+                <div class="col-md-6 mx-auto shadow p-3 mb-5 bg-white rounded p-5">
+                    <h4>LOG IN</h4>
+                    <input type="text" class="form-control" placeholder="Enter your email">
+                    <input type="password" name="" id="" class="form-control mt-3" placeholder="Enter your password">
+                    <button class="btn btn-success form-control mt-3" id="login-btn">LOG IN</button>
+                </div>
             </div>
         </div>
-    </div>
-   </section>
+    </section>
     <!-- ------transaction area---------- -->
     <section id="transaction-area">
         <div class="container">
-            <div class="row g-4 mb-4">
+            <div class="row g-5 mb-4">
                 <div class="col-md-4">
-                    <div class="deposit-section p-4 text-white rounded">
+                    <div class="deposit-section p-4 text-white rounded" >
                         <h4>Deposit</h4>
-                        <h1>$ <span>00</span> </h1>
+                        <h1>$ <span id="current-deposit">00</span> </h1>
 
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="withdraw-section p-4 text-white rounded">
+                    <div class="withdraw-section p-4 text-white rounded" >
                         <h4>Withdraw</h4>
-                        <h1>$ <span>00</span> </h1>
+                        <h1>$ <span id="current-withdraw">00</span> </h1>
 
                     </div>
                 </div>
@@ -57,26 +57,26 @@
                 <div class="col-md-4">
                     <div class="balance-section p-4 text-white rounded">
                         <h4>Balance</h4>
-                        <h1>$ <span>00</span> </h1>
+                        <h1>$ <span id="current-balance">1200</span> </h1>
 
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-5">
                 <div class="col-md-6">
                     <div class="deposit-amount shadow p-3 mb-4 bg-white rounded p-4">
                         <h4 class="mb-4">Deposit</h4>
-                        <input type="text" class="form-control mb-3" placeholder="$ Deposit amount">
-                        <button class="btn btn-success">Deposit</button>
+                        <input type="text" class="form-control mb-3" placeholder="$ Deposit amount" id="deposit-amount">
+                        <button class="btn btn-success" id="deposit-btn">Deposit</button>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="withdraw-amount shadow p-3 mb-4 bg-white rounded p-4">
                         <h4 class="mb-4">Withdraw</h4>
-                        <input type="text" class="form-control mb-3" placeholder="$ Withdraw amount">
-                        <button class="btn btn-success">Withdraw</button>
+                        <input id="withdraw-amount" type="text" class="form-control mb-3" placeholder="$ Withdraw amount">
+                        <button class="btn btn-success" id="withdraw-btn">Withdraw</button>
                     </div>
                 </div>
             </div>
