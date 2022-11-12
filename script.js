@@ -1,56 +1,40 @@
-//log in event handler
-
+//login button handler
 document.getElementById('login-btn').addEventListener('click',function(){
-    document.getElementById('login-page').style.display = 'none';
-    document.getElementById('transaction-area').style.opacity = '1';
-});
+    document.getElementById('login-page').style.display = 'none'; 
+    document.getElementById('transaction-area').style.opacity = 1;
+})
 
+//add function
+function getInputValue(id){
+    let amount = document.getElementById(id).value;
+    amount = parseFloat(amount);
+    return amount;
+}
 
-//deposit button event handler
-
+function updateAmount(id, amountNumber){
+    let amount = document.getElementById(id).innerText;
+    amount = parseFloat(amount);
+    let total = amount + amountNumber;
+    document.getElementById(id).innerText = total;
+}
+//deposit button handler
 document.getElementById('deposit-btn').addEventListener('click',function(){
+    let depositAmount = getInputValue('deposit-amount');
 
-let depositAmount = document.getElementById('deposit-amount').value;
-depositAmount = parseFloat(depositAmount);
-
-
-let currentDeposit = document.getElementById('current-deposit').innerText;
-currentDeposit = parseFloat(currentDeposit);
-
-let totalDeposit = depositAmount + currentDeposit;
-
-document.getElementById('current-deposit').innerText = totalDeposit;
-document.getElementById('deposit-amount').value = '';
-
-let currentBalance = document.getElementById('current-balance').innerText;
-currentBalance = parseFloat(currentBalance);
-
-let totalBalance = depositAmount + currentBalance;
-document.getElementById('current-balance').innerText = totalBalance;
+  updateAmount('current-deposit',depositAmount);
 
 
-});
+    updateAmount('current-balance',depositAmount);
 
-// withdraw event handler
+    document.getElementById('deposit-amount').value = '';
+
+})
+
+// withdraw button handler
+
 document.getElementById('withdraw-btn').addEventListener('click',function(){
-
-    let withdrawAmount = document.getElementById('withdraw-amount').value;
-    withdrawAmount = parseFloat(withdrawAmount);
-    
-    
-    let currentWithdraw = document.getElementById('current-withdraw').innerText;
-    currentWithdraw = parseFloat(currentWithdraw);
-    
-    let totalWithdraw = withdrawAmount + currentWithdraw;
-    
-    document.getElementById('current-withdraw').innerText = totalWithdraw;
+    let withdrawAmount = getInputValue('withdraw-amount');
+    updateAmount('current-withdraw',withdrawAmount);
+    updateAmount('current-balance',-1*withdrawAmount);
     document.getElementById('withdraw-amount').value = '';
-    
-    let currentBalance = document.getElementById('current-balance').innerText;
-    currentBalance = parseFloat(currentBalance);
-    
-    let totalBalance = currentBalance - withdrawAmount;
-    document.getElementById('current-balance').innerText = totalBalance;
-    
-    
-    });
+})
